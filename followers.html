@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="followers.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="list-wrapper" ng-app="app" ng-controller="MainCtrl as ctrl">
+        <ul class="list">
+          <li class="list-item" h3>Your followers</h3>
+            <div>
+              <img src="" class="list-item-image">
+              
+            </div>
+            <div class="list-item-content" id="items">
+              <h4></h4>
+              <p></p>
+            </div>
+          </li>
+          <li ng-repeat="user in ctrl.users" class="list-item">
+            <div>
+              <img src=""  class="list-item-image">
+            </div>
+            <div class="list-item-content">
+              <h4></h4>
+              <p></p>
+            </div>
+          </li>
+        </ul>
+        
+      </div>
+
+
+
+
+
+    
+      <script src="helpers.js"></script>
+      <script src="requests.js"></script>
+      <script src="followers.js"></script>
+</body>
+</html>

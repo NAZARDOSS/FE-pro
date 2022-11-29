@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LOG IN</title>
+  <link rel="stylesheet"
+    href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" />
+    <link rel="stylesheet" href="style.css">
+  
+</head>
+
+<body>
+  <div class="login">
+    <div class="login__row">
+      <span class="login__icon">
+        <i class="las la-fingerprint"></i>
+      </span>
+    </div>
+    <h1 class="title">Welcome!</h1>
+    <div class="login__row">
+      <div class="login__input-container">
+        <i class="las la-user"></i>
+        <input type="text" id="username" class="login__input" placeholder ="username" />
+      </div>
+
+      <div>
+        <div class="login__row">
+          <div class="login__input-container">
+            <i class="las la-key"></i>
+            <input type="password" id="password" class="login__input" placeholder="password"/>
+          </div>
+        </div>
+      </div>
+      <div>
+      </div>
+
+      <div class="login__input-container">
+        <i class="las la-key"></i>
+        <input type="password" id="confirm_password" class="login__input" placeholder="confirm password" />
+        
+      </div>
+      <div class="down__container">
+
+        <!-- <button class="logOut" onclick="logOut()">Log Out</button>
+     -->
+      <button class="signIn__button"  onclick="signUp()" id="signUp">Sign Up</button>
+
+      <!-- <button class ="GetMe"onclick="getMe()">Get Me</button> -->
+
+      </div>
+      <div class="ask_line">
+      <h6 class="ask">Do you have an Account?</h4>
+        
+        
+      <button class="signIn" onclick="goToSignIn()"id="signUp"></a>Sign In</button>
+
+      </div>
+
+      <!-- <div class="footer">
+        
+        <button class="signUp" onclick="updateData()" id="updateData">Update Data</span>
+        </button>
+        <button onclick="deleteMe()">Delete Me</button>
+      </div> -->
+
+    </div>
+  </div>
+  <script src="requests.js"></script>
+  <script src="helpers.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

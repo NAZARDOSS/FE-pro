@@ -1,0 +1,119 @@
+@import 'colors.scss';
+%profile_image {
+    float: left;
+    width: calc(33.333% - 1rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3rem;
+}
+
+%galery_item{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2.5rem;
+    text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+}
+
+
+.settings{
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    
+
+
+    button{
+        background:none;
+        border-radius: 2px;
+        cursor: pointer;
+        border: solid black 1px;
+        &:hover{
+        background-color:$color-main
+        }
+    }
+}
+body {
+    font-family: "Open Sans", Arial, sans-serif;
+    min-height: 100vh;
+    background-color: white;
+    color: black;
+    padding-bottom: 3rem;
+    img{
+        display: block;
+    }
+    
+}
+:root {
+    font-size: 10px;
+}
+.container {
+    max-width: 93.5rem;
+    margin: auto;
+}
+
+.profile-user-name {
+
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+.profile-bio {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1;
+    padding-top: 1rem;
+    
+}
+
+.profile-stats {
+    width: max-content;
+    padding-left: 5rem;
+
+li {
+    display: inline-block;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin-right: 4rem;
+    cursor: pointer;
+}
+last-of-type {
+    margin-right: 0;
+}
+}
+.profile-image {
+   @extend %profile_image;
+img {
+    border-radius: 50%;
+}
+}
+.profile {
+    display: flex;
+    padding: 5rem 0;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -1rem -1rem;
+    padding-bottom: 3rem;
+}
+
+.gallery-item {
+    position: relative;
+    flex: 1 0 22rem;
+    margin: 1rem;
+    color: $primary;
+    cursor: pointer;
+}
+
+.gallery-item-type {
+    @extend %galery_item;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

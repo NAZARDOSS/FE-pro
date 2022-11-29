@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styleAcc.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="profile">
+          <div class="profile-image">
+            <img
+              src=""
+              alt=""
+              id="userAvatar"
+              style="width: 152px; aspect-ratio: 1; border: 2px solid gray"
+            />
+          </div>
+
+          <div class="profile-stats">
+            <h1 class="profile-user-name" id="username"></h1>
+            <div class="profile__info">
+              <!-- <li>
+                <span class="profile-stat-count"> <b>164</b> </span> posts
+              </li>
+              <li>
+                <a
+                  href="followers.html"
+                  id="followers"
+                  class="profile-stat-count"
+                  ><b>followers</b></a
+                >
+              </li>
+              <li>
+                <span class="profile-stat-count"><b>206</b></span> following
+              </li> -->
+              <ul>
+                <li><span class="profile-stat-count" id="postCount"></span></li>
+                <li><a href="followers.html"  class="profile-stat-count" id="flws"></a></li>
+                <li><a href="followings.html" class="profile-stat-count" id="flwngs"></a></li>
+            </ul>
+              
+            </div>
+            <div class="profile-bio">
+              <span class="profile-real-name" id="fullname"></span>
+              <span id="userBio"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings">
+          <!-- всплывающее окно -->
+            <button id="#" id="open" onclick="openPop()">make following</button>
+
+            <div class="pop_up" id="popUp">
+              <div class="pop_up_container">
+                <div class="pop_up_body1" id="body">
+                  <div class="popup_close" id="close">&#10006</div>
+                  <form action="" style="font-size: 2rem">
+                    Make following to
+                    <input type="text" id="input_username" placeholder="username">
+                    <button class="pop_button" onclick="follow()">make following</button>
+                  </form>
+                  
+                </div>
+              </div>
+            </div>
+           <!-- всплывающее окно -->
+
+
+
+           <!-- всплывающее окно -->
+           <button class="edit__me" id="open1" onclick="openPop1()">
+            Edit Me
+          </button>
+
+           <div class="pop_up" id="popUp1">
+            
+             <div class="pop_up_container">
+              
+               <div class="pop_up_body" id="body">
+                <div class="popup_close" id="close1">&#10006</div>
+               
+                 <form action="" method="post" style="font-size: 2rem">
+                   Edit my Data
+                   <input type="text" id="input_avatar" placeholder="avatar">
+                   <input type="text" id="input_age" placeholder="age">
+                   <input type="text" id="input_bio" placeholder="bio">
+                   <input type="text" id="input_fullname" placeholder="fullname">
+
+                   <button class="pop_button" onclick="newI()">Edit Me</button>
+                 </form>
+                 
+               </div>
+             </div>
+           </div>
+          <!-- всплывающее окно -->
+
+          <button class="edit__profile" id="edit" onclick="postShow()">
+            Post info
+          </button>
+          
+          <button class="logout" id="logout" onclick="logOut()">Log out</button>
+          <button
+            class="delete"
+            id="delete"
+            style="border-color: red; color: red"
+            onclick="deleteMe()"
+          >
+            Delete account
+          </button>
+        </div>
+        <!-- End of profile section -->
+      </div>
+      <!-- End of container -->
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="gallery" id="items"></div>
+        <!-- End of gallery -->
+      </div>
+      <!-- End of container -->
+    </main>
+
+    <script>
+      const openPopUp = document.getElementById('open');
+      const openPopUp1 = document.getElementById('open1');
+      const closePopUp = document.getElementById('close');
+      const closePopUp1 = document.getElementById('close1');
+      const popUp = document.getElementById('popUp');
+      const popUp1 = document.getElementById('popUp1');
+      function openPop(){
+        popUp.classList.add('active');
+      
+
+
+      };
+      function openPop1(){
+        popUp1.classList.add('active');
+
+
+      };
+
+      closePopUp.addEventListener('click',()=> {
+        popUp.classList.remove('active');
+      })
+      closePopUp1.addEventListener('click',()=> {
+        popUp1.classList.remove('active');
+      })
+    </script>
+
+    <script src="requests.js"></script>
+    <script src="helpers.js"></script>
+    <script src="app.js"></script>
+    <script src="script.js"></script>
+    <script src="post.js"></script>
+  </body>
+</html>
