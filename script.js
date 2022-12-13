@@ -70,27 +70,27 @@ for(let i = 0; i < data.length; i++){
    //text
     ctx.beginPath()
     ctx.font = "normal 9px a"
-    ctx.fillText(a,40,150);
+    ctx.fillText(data[0].course,40,150);
 
     ctx.font = "normal 9px a"
     ctx.fillStyle="indigo";
-    ctx.fillText(b,99,150);
+    ctx.fillText(data[1].course,99,150);
 
     ctx.font = "normal 9px a"
     ctx.fillStyle="blue";
-    ctx.fillText(b,154,270);
+    ctx.fillText(data[2].course,154,270);
 
     ctx.font = "normal 9px a"
     ctx.fillStyle="purple";
-    ctx.fillText(b,209,155);
+    ctx.fillText(data[3].course,209,155);
 
     ctx.font = "normal 9px a"
     ctx.fillStyle="orange";
-    ctx.fillText(b,264,158);
+    ctx.fillText(data[4].course,264,158);
 
     ctx.font = "normal 9px a"
     ctx.fillStyle="fuchsia";
-    ctx.fillText(b,319,165);
+    ctx.fillText(data[5].course,319,165);
     
 
 }
